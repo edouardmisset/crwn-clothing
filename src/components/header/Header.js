@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { ReactComponent as Logo } from '../../assets/crown.svg'
-// import Logo  from '../../assets/crown.svg'
 import './Header.scss'
 
 const Header = () => (
@@ -15,7 +14,7 @@ const Header = () => (
       <Link className="option" to="/contact">
         CONTACT
       </Link>
-    </div> 
+    </div>
   </div>
 )
 
