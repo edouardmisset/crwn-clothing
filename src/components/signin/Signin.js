@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CustomButton from '../custom-button/CustomButton'
 import FormInput from '../form-input/FormInput'
+import { signInWithGoogle } from '../../firebase/firebase.utils'
 import './Signin.scss'
 
 export class Signin extends Component {
@@ -21,7 +22,6 @@ export class Signin extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    // this.props.signin(this.state)
     this.setState({
       email: '',
       password: '',
@@ -51,6 +51,9 @@ export class Signin extends Component {
             required
           />
           <CustomButton type="submit">Sign In</CustomButton>
+          <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            Sign In with Google
+          </CustomButton>
         </form>
       </div>
     )
