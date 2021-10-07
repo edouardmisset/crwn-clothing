@@ -15,17 +15,23 @@ class App extends Component {
     }
   }
 
+  unsubscribeFromAuth = null
+
   componentDidMount() {
-    auth.onAuthStateChanged(user => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
       this.setState({ currentUser: user })
-      console.log(this.state.currentUser)
+      console.log(this.state.currentUser.multiFactor.user.displayName)
     })
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth()
   }
 
   render() {
     return (
       <div>
-        <Header />
+        <Header currentUser={this.state.currentUser}/>
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/shop" component={Shop} />
