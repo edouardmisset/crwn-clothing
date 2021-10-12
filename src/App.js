@@ -7,7 +7,7 @@ import { createStructuredSelector } from 'reselect'
 import './App.css'
 
 import Homepage from './pages/homepage/Homepage'
-import Shop from './pages/shop/Shop'
+import ShopPage from './pages/shoppage/ShopPage'
 import Header from './components/header/Header'
 import SigninAndRegister from './pages/signin-and-register-page/Signin-and-register'
 import CheckoutPage from './pages/checkout/CheckoutPage'
@@ -45,7 +45,7 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route path="/shop" component={Shop} />
+          <Route path="/shop" component={ShopPage} />
           <Route exact path="/checkout" component={CheckoutPage} />
           <Route
             exact
