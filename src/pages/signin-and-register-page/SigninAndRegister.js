@@ -1,6 +1,6 @@
 import Register from '../../components/register/Register'
 import Signin from '../../components/signin/Signin'
-import './signin-and-register.scss'
+import './SigninAndRegister.scss'
 
 export default function SigninAndRegister() {
   return (
