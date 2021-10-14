@@ -3,8 +3,8 @@ import StripeCheckout from 'react-stripe-checkout'
 
 const StripeButton = ({ price }) => {
   const priceForStripe = price * 100
-  const publishableKey =
-    'pk_test_51Jjr0JDnH07oNHZUEz0uOiBTN3tSNppoD3wUlPmkAEfg1BkZcbXcDCL41GVTn1qlYP644iIHr31VSWTrFoTKVNbI00mvdIVxXs'
+  const publishableKey = process.env.REACT_APP_PUBLISHABLE_KEY
+  console.log(publishableKey)
   return (
     <StripeCheckout
       label="Pay Now"
