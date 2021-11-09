@@ -1,10 +1,10 @@
 import Directory from '../../components/directory/Directory'
-import './Homepage.scss'
+import { HomepageContainer } from './Homepage.styles'
 
 const Homepage = () => (
-  <div className="homepage">
+  <HomepageContainer>
     <Directory />
-  </div>
+  </HomepageContainer>
 )
 
 export default Homepage
